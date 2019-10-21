@@ -1,0 +1,44 @@
+
+.footer{
+	margin-top: 5%;
+	height:10px; 
+	max-width: 100%; 
+	z-index: 4;
+	margin-top:0;
+	}
+	a:hover {
+ 	/*background: #F8E0E6;*/
+ 	color: #08088A;
+ 	font-weight: bold;
+ 	/*border-color: #B1B1B1;*/
+
+	}
+
+
+
+/*media menor que*/
+@media screen and (max-width: 1023px)
+	{
+	.footer{
+		margin-top: 0;
+		/*height:5px; */
+		max-width: 100%; 
+		size: 25px;
+		z-index: 1;
+		color: black;
+		background-color:white;
+		}
+		/*a:link{
+			text-decoration: none;
+		}*/
+		a:hover {
+	 	/*background: #F8E0E6;*/
+	 	color: #58ACFA;
+	 	font-weight: bold;
+	 	/*border-color: #B1B1B1;*/
+		}
+}
+
+
+
+

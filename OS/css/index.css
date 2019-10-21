@@ -1,0 +1,389 @@
+
+
+@media screen and (max-width: 1181px){
+		.container{
+			background-color: white;
+			width: 98%;
+			height:0 auto;
+			margin: 5px 2px;
+			padding: 12px 10px;
+			font-size: 14px;
+			border:solid 1px lightgray;
+			font-family: poppins;
+		}
+		
+		.header{
+			display: none;
+		}
+		.label{
+			display: inline-flex;
+			flex-direction: inline;
+			font-family: poppins;
+			font-weight: bold;
+			word-spacing: 5px;
+		}
+		.label1{
+			display: block;
+			flex-direction: column;
+			font-family: poppins;
+			font-weight: bold;
+		}
+		.id{
+			display:none;
+		}
+		.id_apelido{
+			background-color:#A9F5A9;
+			font-family: Poppins;
+			width: 100%;
+			text-align: center;
+			margin: 5px 0;
+			word-spacing: 10px;
+		}
+		.apelido{
+			background-color:#A9F5A9;
+			font-family: Poppins;
+			width: 100%;
+			text-align: center;
+			margin: 5px 0;
+		}
+		.loja{
+			width:  100%;
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: lightgreen;*/
+			margin:  0 5px; 
+			font-size: 22px;
+			font-family: poppins;
+			padding: 10px 5px;
+		}
+		.solicitante{
+			width:  100%;
+			flex-direction: column;
+			display: inline-block;
+			font-family: poppins;
+			padding: 10px 5px;
+		}
+		.titulo{
+			text-align: center;
+			font-family: poppins;
+			background-color: lightgreen;
+			word-spacing: 5px;
+			font-weight: bold;
+			width:  98%; 
+			margin: 5px; 
+		}
+		.status{
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: #D3D3D3;*/
+			margin: 5px; 
+			width: 98%; 	
+		}
+		.abertura{
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: #D3D3D3;*/
+			width:  98%; 
+			margin: 5px;  	
+		}
+		.defeito_reclamado{
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: #D3D3D3; */
+			width: 98%;
+			margin: 5px;  	
+		}
+		.prioridade{
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: #D3D3D3;*/
+			width: 98%;
+			margin: 5px;   	
+		}
+		.atribuido{
+			width: 98%;	
+			flex-direction: column;
+			display: inline-block;
+			/*background-color: #D3D3D3; */
+			margin: 5px; 
+			}
+		.prioridade.alta{
+			background-color: #FF6347;
+		}
+		.prioridade.normal{
+			background-color: #04B431;
+		}
+		.prioridade.media{
+			background-color: #DAA520;
+		}
+		.edicao{
+			flex-direction: column;
+			display: inline-block;
+			width: 100%;
+			margin: 10px;
+		}
+		.link1{
+			flex-direction: column;
+			display: inline-block;
+			width: 45%;	
+			padding: 0 10px;
+		}
+		.button-link1{
+			
+			width: 100%;
+			height: 40px;
+			text-align: center;	
+			background-color:#3CB371;
+			padding: 10px 35%;
+			font-weight: bolder;
+			margin-left: -5px;
+			border-radius: 10px;
+		}
+		.link2{
+			flex-direction: column;
+			display: inline-block;
+			width: 45%;
+			padding: 0 10px;
+			margin-left: 1%;	
+		}			
+		.button-link2{
+			flex-direction: column;
+			display: inline-block;
+			width: 100%;	
+			height: 40px;
+			text-align: center;
+			background-color:#FF6347;
+			padding: 10px 35%;
+			font-weight: bolder;
+			margin-left: -5px;
+			border-radius: 10px;
+		}	
+		
+	}
+	@media screen and (min-width: 1181px){
+		.label{
+			display:none;
+		}
+		.label1{
+			display:none;
+		}
+		.line{
+			display: none;
+		}
+	.header{
+		width: 100%;
+		/*margin: 0 5px;*/
+		padding: 10px;
+		background-color:  #2E8B57;
+		font-family:  poppins;
+		color: white;
+		font-size: 14px;
+	}
+	.H0{
+		flex-direction: column;
+		display: inline-flex;
+		width: 3.5%;
+	}
+	.H1{
+		flex-direction: column;
+		display: inline-flex;
+		width: 4.5%;
+	}
+	.H2{
+		flex-direction: column;
+		display: inline-flex;
+		width: 33.6%;
+	}
+	.H3{
+		flex-direction: column;
+		display: inline-flex;
+		width: 11.5%;
+	}
+	.H4{
+		flex-direction: column;
+		display: inline-flex;
+		width: 7.6%;
+	}
+	.H5{
+		flex-direction: column;
+		display: inline-flex;
+		width: 8%;
+	}
+	.H6{
+		flex-direction: column;
+		display: inline-flex;
+		width: 8%;
+	}
+	.H7{
+		flex-direction: column;
+		display: inline-flex;
+		width: 12.4%;
+	}
+	.H8{
+		flex-direction: column;
+		display: inline-flex;
+		width: 6.6%;
+	}
+	.container{
+		background-color: white;
+		width: 100%;
+		height:0 auto;
+		/*margin: 0 5px;*/
+		padding: 2px 10px;
+		font-size: 14px;
+	}
+	.id_apelido{
+			display: none;
+		}
+		.apelido{
+			display: none;
+		}
+	.id{
+		flex-direction: column;
+		display: inline-flex;
+		background-color: #A9F5A9;
+		text-align: center;
+		font-family:  poppins;
+		font-color:#0B3B0B;
+		width: 3%;
+		/*margin: 1px -1px;*/
+		padding:8px 10px;
+		height: 40px;
+		padding
+		
+	}
+	.loja{
+		flex-direction: column;
+		display: inline-flex;
+		background-color: #A9F5A9;
+		text-align: center;
+		font-family:  poppins;
+		font-color:#0B3B0B;
+		font-weight: bold;
+		width: 3%;
+		/*margin: 1px -1px;*/
+		padding:8px 10px;
+		height: 40px;
+		padding
+		
+	}
+	.solicitante{
+		display: none;
+	}
+	.titulo{
+		background-color: #2E8B57;
+		width: 98.5%;
+		padding: 10px;
+		height: 40px;
+		margin: 10px;
+		text-align: center;
+		font-family: poppins;
+		word-spacing: 5px;
+		color:white;
+		
+		
+	}
+	.status{
+		flex-direction: column;
+		display: inline-flex;
+		background-color:#A9F5A9;
+		width: 10%;
+		padding:10px;
+		height: 40px;
+		padding
+		
+	}
+	.abertura{
+		flex-direction: column;
+		display: inline-flex;
+		background-color: #A9F5A9;
+		width: 6%;
+		padding:10px;
+		height: 40px;
+		padding
+		
+	}
+	.defeito_reclamado{
+		flex-direction: column;
+		display: inline-flex;
+		background-color: #A9F5A9;
+		width: 34%;
+		padding:10px;
+		height: 40px;
+		padding
+		
+	}
+	.prioridade{
+		text-align: center;
+		flex-direction: column;
+		display: inline-flex;		
+		width: 5%;
+		padding:10px;
+		height: 40px;
+		padding
+		
+	}
+	.prioridade.alta{
+		background-color: #FF6347;
+	}
+	.prioridade.normal{
+		background-color: #04B431;
+	}
+	.prioridade.media{
+		background-color: #DAA520;
+	}
+	.atribuido{
+		flex-direction: column;
+		display: inline-flex;
+		background-color: #A9F5A9;
+		width: 5.6%;
+		padding:10px;
+		height: 40px;
+	}
+	.edicao{
+		flex-direction: column;
+		display: inline-flex;
+		background-color:#A9F5A9;
+		width: 25%;
+		margin-top:4px;
+		padding: 3px 1px;
+		height: 40px;
+		text-align: left;
+	}
+	.link1{
+		/*background-color:lightblue;*/
+		width: 30%;
+		text-align: center;
+		padding: -6px 5px;
+		margin: 1px 125px;
+	}
+	.button-link1{
+		padding:5px 20px;
+		background: #006400;
+		color: #FFF;
+		margin-left: 10px;
+	}	
+	.link2{
+		width: 30%;
+		text-align: left;
+		margin: -29px 230px;
+		/*padding: 0 5px;*/
+		/*background-color:lightblue;*/
+	}
+	.button-link2{
+		padding:5px 15px;
+		background:	#FF6347;
+		color: #FFF;
+		margin-left: 10px;
+	}	
+	.rodape{
+		flex-direction: column;
+		display: inline-block;
+		width: 98.5%;
+		background-color: #2E8B57;
+		margin-left: 10px;
+		height: 0 auto;
+	}
+	
+	
+}

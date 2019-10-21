@@ -1,0 +1,138 @@
+
+.ensaio
+{
+margin-top: 5px;
+/* padding-top: 7px;*/
+font-size: 10px;
+font-family: helvetia,calibri,geneva;
+font-weight: bold;
+border-top:2px solid lightblue;
+}
+.icone{
+padding-top: 0%;
+cursor: pointer;
+width: 60px;
+align-items: center;
+}
+.icone:hover{
+background-color: lavender;
+opacity: 0.3;
+}
+.conteiner{
+width: 0 auto;
+height:0 auto;
+background-color: lightblue;
+display: flex;
+padding: 2px;
+
+}
+.loja{
+width: 100px;
+padding-top:  60px;
+height: 0 auto;
+background-color: white;
+text-align: center;
+font-family:helvetia,calibri,geneva;
+font-size: 10px;
+font-weight: bolder;
+color:blue;
+flex-direction: column;
+}
+.conteudo{
+margin-right:  1px;
+margin-left:  1px;
+width: 150%;
+height: 0 auto;
+padding:10PX 2px ;
+background-color: white;
+opacity: 1;
+font-family: helvetia,calibri,geneva;
+font-size: 80%;
+}
+.rotas{
+width:150px; 
+padding-left: 10px;
+background-color: white;
+}
+.apelido2{
+margin-top: 1px;
+font-weight: bold;
+padding-bottom:10PX ;
+font-size: 20px;
+font-family: helvetia,calibri,geneva;
+color: blue;
+}
+.botao{
+width: 0 auto;
+border: none;
+color: white;
+padding: 10px 14px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 11px;
+font-family: helvetia,calibri,geneva;
+margin:5px 1px;
+transition-duration: 0.4s; /* Safari */
+background-color: white; 
+color: blue; 
+/*border: 2px solid lightblue;*/
+}
+.botao:hover {
+background-color: #008CBA;
+color: white;
+cursor: pointer;
+}  
+
+@media screen and (min-width:600px){  
+   .icone{
+    padding-top: 0px;
+    cursor: pointer;
+    width: 100px;
+    }
+    .icone:hover{
+    background-color: lavender;
+    opacity: 1;
+    } 
+    .conteiner{
+    width: 0 auto;
+    height:0 auto;
+    background-color: lightblue;
+    display: flex;
+    padding: 2px;
+    }
+    .apelido2{
+    font-size: 35px;
+    }
+    .conteudo{
+    font-size: 150%;
+    }
+    .ensaio {
+    margin-top: 10px;
+    padding-top: 7px;
+    font-size: 20px;
+
+    }
+    .loja{
+    width: 250px;
+    padding-top:  80px;
+    height: 0 auto;
+    background-color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 20px;
+    font-weight: bolder;
+    color:blue;
+    flex-direction: column;
+    }
+    .botao{
+    font-size: 20px;
+    font-family: Arial,times,tahoma,;
+    font-weight: bold;
+    }
+    .rotas{
+    width:650px; 
+    padding-top: 50px;
+    background-color: white;
+    }
+}
