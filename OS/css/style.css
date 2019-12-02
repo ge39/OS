@@ -33,7 +33,7 @@ nav{
 .nav-links{
 	display: flex;
 	justify-content: space-around;
-	width:30%;
+	width:50%;
 }
 .nav-links li{
 	list-style: none;
@@ -88,6 +88,8 @@ nav{
 	}
 	.burguer{
 		display: block;
+		
+
 	}
 }
 .nav-active{

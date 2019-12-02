@@ -6,17 +6,15 @@
 </head>
 <body>
 	<div class="container">
-	
-		
 		<div class="conteudo">
-				<h2>Seja Bem Vindo</h2>
-			<a href="./public/index.php">Acessar o Sistema</a>
+				<p class="titulo">Seja Bem Vindo</p>
+			<a class="linque" href="./public/index.php">Acessar o Sistema de Chamados</a>
 		</div>
 	</div>
 </body>
 <style>
 	
-	 a:link, a:visited {
+	a:link, a:visited {
 	  background-color: lightblue;
 	  color: white;
 	  padding: 14px 25px;
@@ -30,82 +28,48 @@
 
 	}
 	.container{
-		direction: inline-block;
-		direction: column;
-		width: 49%;
+		width: 90%;
+		height: 100%;
 		border: solid lightblue 1px;
-		text-align: center;
-		padding-top: 5%;
-		margin: 10% 20%;
+		padding-top: 0%;
+		margin: 10% 5%;
 		color:lightblue;
 		font-family: poppins;
 	}
 	.conteudo{
-		direction: inline-block;
-		direction: column;
 		width: 50%;
-		margin: 2% 15%;
-	
+		text-align: center;
 		height: 20%;
-		padding:5% 10%
+		padding:5% 23%
+
 	}
-	.button{
+	.titulo{
+		font-size:50px;
+		color: gray;
+	}
+	.linque{
 		font-family: poppins;
 		padding: 1% 15%;
+		font-size:450%;
+                width: 90%;
+	}
 
+	@media screen and (min-width:1024px ){
+	.container{
+		border: none;
+		width: 40%;
+		height: 100%;
+		margin-left: 30%;
+		width: 40%;
 	}
-	@media screen and (min-width: 360px){
-		.container{
-			padding: 5%;
-			width: 90%;
-			margin: 10% -7%;
-			color:lightblue;
-			font-size: 60px;
-			border: none;
-			
-		}
-		.conteudo{
-			font-size: 60px;
-			padding: 15%
-			
+	.titulo{
+		font-size:30px;
+		color: black;
 	}
-		.button{
-		font-family: poppins;
-		padding: 15% 0;
-		font-size: 24px;
-
-	}
-	@media screen and (min-width: 1024px){
-		.container{
-			padding-top: 5%;
-			margin: 10% 0;
-			color:lightblue;
-			font-size: 20px;
-			
-		}
-		.button{
+	.linque{
 		font-family: poppins;
 		padding: 1% 15%;
-		font-size: 20px;
-
-	}
-	@media screen and (min-width: 1360px){
-		.container{
-			padding-top: 5%;
-			margin: 10% 0;
-			color:lightblue;
-			font-size: 20px;
-			
-		}
-		.conteudo{
-			font-size: 50px;
-			padding: 15%;
-		}
-		.button{
-		font-family: poppins;
-		padding: 1% 15%;
-		font-size: 20px;
-
+		font-size:120%;
 	}
 }
 </style>

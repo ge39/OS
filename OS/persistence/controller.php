@@ -14,7 +14,7 @@ elseif(!empty($_GET['id'])){
 	$_GET['id'];
 	//seleciona o chamado pelo numero id
 	$id = $_GET['id'];
-	$var_select = $pdo->prepare("select A.id_chamado,I.id,I.id_estoque,I.reclamado,I.solicitante,A.descricao_chamado ,D.loja,H.nome,I.solucao,I.pendencia,I.data_abertura_chamado,I.avaliacao_tecnico,J.prioridade 
+	$var_select = $pdo->prepare("select A.id_chamado,I.id_tecnico,I.id,I.id_estoque,I.reclamado,I.solicitante,A.descricao_chamado ,D.loja,H.nome,I.solucao,I.pendencia,I.data_abertura_chamado,I.avaliacao_tecnico,J.prioridade 
 from chamado_status A, loja D, tecnico H, ordem I,prioridade J where  A.id_chamado = I.id_status_chamado and D.id = I.id_loja and I.id_tecnico = H.id and I.id_prioridade = J.id and I.id =:id");
 	$var_select->bindValue(":id", $id);
 	$var_select->execute();
@@ -82,9 +82,9 @@ require_once('../conexao/conexao.php');
 if(!empty($_GET['id_tec'])){
 		$tecnico = $_GET['id_tec'];
 
-	//seleciona os chamados abertos pelo id_tecnico
-	$var_select_tec = $pdo->prepare("select I.id,I.reclamado,I.solicitante,I.id_tecnico,I.ultima_atualizacao,A.descricao_chamado as descr,D.loja,H.nome,I.data_abertura_chamado,J.prioridade 
-	from chamado_status A, loja D,tecnico H, ordem I,prioridade J where A.id  = I.id_status_chamado and D.id = I.id_loja and I.id_tecnico = H.id and I.id_prioridade = J.id and I.id_status_chamado <> '5' and id_tecnico = :tec order by i.id desc");
-		$var_select_tec->bindValue(':tec',$tecnico);
-		$var_select_tec->execute();
+        //seleciona os chamados abertos pelo id_tecnico
+        $var_select_tec = $pdo->prepare("select I.id,I.reclamado,I.solicitante,I.id_tecnico,I.ultima_atualizacao,A.descricao_chamado as descr,D.loja,H.nome,I.data_abertura_chamado,J.prioridade 
+        from chamado_status A, loja D,tecnico H, ordem I,prioridade J where A.id_chamado  = I.id_status_chamado and D.id = I.id_loja and I.id_tecnico = H.id and I.id_prioridade = J.id and I.id_status_chamado <> '5' and id_tecnico = :tec order by I.id desc");
+                $var_select_tec->bindValue(':tec',$tecnico);
+                $var_select_tec->execute();
 }

@@ -54,7 +54,7 @@ require_once('../persistence/controller.php');
 			?>
 		</div>
 		<div class= "atribuido">
-			<?php echo '<div class="label">Atribuido para </div>'." ".$row['nome']."<br>";?>
+                       	<?php echo '<div class="label">Atribuido para </div>'." ".$row['nome']."<br>";?>
 		</div>
 		<div class= "edicao">
 				<div class="link2">
@@ -76,7 +76,7 @@ require_once('../persistence/controller.php');
 <script src="../js/app.js"></script>
 <script src="../js/busca.js"></script>
 <style>
-
+	
 @media screen and (max-width: 1181px){
 		.container{
 			background-color: white;
@@ -88,7 +88,7 @@ require_once('../persistence/controller.php');
 			font-family: poppins;
 			font-size: 14px;
 		}
-		
+                
 		.header{
 			display: none;
 		}
@@ -143,10 +143,10 @@ require_once('../persistence/controller.php');
 			text-align: center;
 			font-family: poppins;
 			word-spacing: 5px;
-			background-color:#3CB371;
-			/*font-weight: bold;*/
+			background-color:lightgreen;
+			font-weight: bold;
 			width:  98%; 
-			margin: 5px; 
+            margin: 5px; 
 		}
 		.status{
 			flex-direction: column;
@@ -222,8 +222,6 @@ require_once('../persistence/controller.php');
 		}	
 		
 		.button-link2{
-			flex-direction: column;
-			display: inline-block;
 			width: 100%;	
 			height: 40px;
 			padding: 10px 0;
@@ -237,6 +235,7 @@ require_once('../persistence/controller.php');
 		
 	}
 	@media screen and (min-width: 1181px){
+        
 		.label{
 			display:none;
 		}
@@ -347,7 +346,8 @@ require_once('../persistence/controller.php');
 		display: none;
 	}
 	.titulo{
-		background-color: #2E8B57;
+		display: none;
+		/*background-color: #2E8B57;
 		width: 98.5%;
 		padding: 10px;
 		height: 40px;
@@ -356,7 +356,7 @@ require_once('../persistence/controller.php');
 		font-family: poppins;
 		word-spacing: 5px;
 		color:white;
-		
+		*/
 		
 	}
 	.status{
@@ -383,7 +383,7 @@ require_once('../persistence/controller.php');
 		flex-direction: column;
 		display: inline-flex;
 		background-color: #A9F5A9;
-		width: 34%;
+		width: 47%;
 		padding:10px;
 		height: 40px;
 		padding
@@ -420,16 +420,16 @@ require_once('../persistence/controller.php');
 		flex-direction: column;
 		display: inline-flex;
 		background-color:#A9F5A9;
-		width: 25%;
+		width: 12%;
 		margin-top:4px;
-		padding: 3px 1px;
+		padding: 3px ;
 		height: 40px;
 		text-align: left;
 	}
 	.link2{
 		width: 10%;
 		text-align: left;
-		margin: -1px 180px;
+		margin: -1px ;
 		/*padding: -6px 5px;*/
 		/*background-color:lightblue;*/
 	}
@@ -438,6 +438,7 @@ require_once('../persistence/controller.php');
 		background:	#FF6347;
 		color: #FFF;
 		margin-left: 10px;
+		border-radius: 10px;
 	}	
 	.rodape{
 		flex-direction: column;
@@ -447,7 +448,7 @@ require_once('../persistence/controller.php');
 		margin-left: 10px;
 		height: 0 auto;
 	}
-	
+
 	
 }
 </style>

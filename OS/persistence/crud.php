@@ -1,31 +1,33 @@
 <?php
 	require_once("../conexao/conexao.php");
- 	echo $codigo = $_GET['code'];
+ 	 $codigo = $_GET['code'];
  	if(($_GET['code']=='2')){ //fechamento de chamado 2
 		
 		try{
-			$chamado = $_GET['id_chamado'];
-			$status = $_GET['id_chamado'];
-			$id_tecnico = $_GET['id_tecnico'];
-			$data_fechamento = date('Y-m-d H:i', strtotime( $_GET['atualizacao']));
-			date_default_timezone_set('America/Sao_Paulo');
-			$data_fechamento = date('d-m-Y H:i');
-			$avaliacao = $_GET['avaliacao'];
-			$solucao = $_GET['solucao'];
-			$pendencia =  $_GET['pendencia'];
-
-			  $stmt = $pdo->prepare("UPDATE ordem SET id_status_chamado = :id_status,id_tecnico = :id_tecnico,data_fecha_chamado = :data_fechamento,avaliacao_tecnico = :avaliacao,solucao = :solucao, pendencia= :pendencia  WHERE id = :id_chamado");
+                          $id_status_chamado = $_GET['status_chamado'];
+                          $id_chamado        =$_GET['id_chamado'];
+                          $id_tecnico        =$_GET['id_tecnico'];
+                          $data_fechamento   = date('Y-m-d H:i', strtotime( $_GET['data_fechamento'])) ;
+                          $defeito_reclamado = $_GET['defeito_reclamado'];
+                          $avaliacao         =$_GET['avaliacao'];
+                          $pendencia         =$_GET['pendencia'];
+                          $solucao           =$_GET['solucao'];
+                        
+                        $stmt = $pdo->prepare("UPDATE ordem SET id_status_chamado = :id_status_chamado,id_tecnico = :id_tecnico,data_fecha_chamado = :data_fecha,reclamado = :defeito_reclamado, avaliacao_tecnico =:avaliacao,solucao = :solucao,pendencia = :pendencia  WHERE id = :id_chamado");
+                           
 			  $stmt->execute(array(
-			  	':id_status'    =>$status,
-			    ':id_tecnico'	=>$id_tecnico,
-			    ':data_fechamento'	=>$data_fechamento,
-			    ':avaliacao'	=>$avaliacao,
+                                  
+                            ':id_status_chamado'=>$id_status_chamado,
+                            ':id_chamado'       =>$id_chamado,
+                            ':id_tecnico'	=>$id_tecnico,
+                            ':data_fecha'       =>$data_fechamento,
+                            ':defeito_reclamado'=>$defeito_reclamado,
+                            ':avaliacao'         =>$avaliacao,
 			    ':solucao'		=>$solucao,
-			    ':pendencia'	=>$pendencia,
-			    ':id_chamado'	=>$chamado
+			    ':pendencia'	=>$pendencia
 			    ));
-			//header('Location: ../public/index.php?');
-		    echo $status;
+                
+		 header('Location: ../public/index.php?');   
 
 		} catch(PDOException $e) {
 			  echo $stmt->rowCount(); 
@@ -35,37 +37,31 @@
 		}elseif($_GET['code']=='3'){ //atualização de chamado ou reabrir chamados 3
 		$id = $_GET['id_chamado'];
 		try{
-		if(empty($_GET['id_estoque'])){
-			$id_estq = 0 ;
-			$string = $id_estq;
-		}else
-		{
-		$string= $_GET['id_estoque'];
-		}
-		 $id_chamado = $_GET['id_chamado'];
-		 $status_chamado = $_GET['id_chamado'];
-		 $id_tecnico = $_GET['id_tecnico'];
-		// echo $data_fechamento = date('Y/m/d', strtotime( $_GET['data_fechamento']));
-		 $atualizacao = date('Y-m-d', strtotime( $_GET['atualizacao']));
-		 $avaliacao_tecnico = $_GET['avaliacao'];
-		 $solucao = $_GET['solucao'];
-		 $status = $_GET['id_chamado'];
-		 $pendencia = $_GET['pendencia'];
-
-		  $stmt = $pdo->prepare("UPDATE ordem SET id_status_chamado = :id_status,id_tecnico = :id_tecnico,ultima_atualizacao = :data_atualizacao,avaliacao_tecnico = :avaliacao,id_estoque = :saida_estoque, solucao = :solucao, status = :status, pendencia = :pendencia  WHERE id = :id_chamado");
-
-		  	  $stmt->execute(array(
-			  	':id_chamado'	=>$id_chamado,
-			    ':id_status'    =>$status_chamado,
-			    ':id_tecnico'	=>$id_tecnico,
-			    ':data_atualizacao'	=>$atualizacao,
-			    ':avaliacao'	=>$avaliacao_tecnico,
-			    ':saida_estoque'=>$string,
-			    ':solucao'		=>$solucao,
-			    ':status'		=>$status,
-			    ':pendencia'	=>$pendencia
-			    ));
-		//header('Location: ../public/index.php?');
+				
+                         $chamado = $_GET['id_chamado'];
+                         $status_chamado = $_GET['status_chamado'];
+                         $id_tecnico = $_GET['id_tecnico'];
+                        // echo $data_fechamento = date('Y/m/d', strtotime( $_GET['data_fechamento']));
+                         $atualizacao = date('Y-m-d', strtotime( $_GET['atualizacao']));
+                         //$data_fechamento = '0000-00-00';
+                         $avaliacao_tecnico = $_GET['avaliacao'];
+                         $solucao = $_GET['solucao'];
+                         $status = $_GET['status_chamado'];
+                         $pendencia = $_GET['pendencia'];
+        
+                          $stmt = $pdo->prepare("UPDATE ordem SET id_status_chamado = :id_status,id_tecnico = :id_tecnico,ultima_atualizacao = :data_atualizacao,avaliacao_tecnico = :avaliacao,solucao= :solucao, status = :status, pendencia = :pendencia  WHERE id = :id_chamado");
+                                  $stmt->execute(array(
+                                    ':id_chamado'	=>$chamado,
+                                    ':id_status'        =>$status_chamado,
+                                    ':id_tecnico'	=>$id_tecnico,
+                                    ':data_atualizacao'	=>$atualizacao,
+                                    ':avaliacao'	=>$avaliacao_tecnico,
+                                    ':solucao'		=>$solucao,
+                                    ':status'		=>$status,
+                                    ':pendencia'	=>$pendencia
+                                    ));
+                        header('Location: ../public/index.php?');
+                  
 		 } catch(PDOException $e) {
 			  echo $stmt->rowCount(); 
 	  		  echo 'Error: ' . $e->getMessage();

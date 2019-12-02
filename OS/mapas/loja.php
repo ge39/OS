@@ -105,7 +105,7 @@ catch (Exception $e)
           margin: 10% 0;
         }
         .titulo{
-          padding: 10%;
+           padding: 10%;
           margin: 10% 0;
           text-align: center;
           font-size: 50px;
@@ -115,5 +115,32 @@ catch (Exception $e)
           direction: column;
           padding: 10%;
         }
+      }
+      
+      @media screen and (min-width: 320px){
+        .img{
+          display: inline-block;
+          direction: column;
+           width: 80px;
+           background-color: none;
+           text-align: center;
+
+        }
+        @media screen and (min-width: 640px){
+        .img{
+          display: inline-block;
+          direction: column;
+           width: 100px;
+           background-color: none;
+           text-align: center;
+
+        }
+        .conteudo{
+           display: inline-block;
+          direction: column;
+          padding: 5%;
+          margin:10%;
+        }
+        
       }
 </style>

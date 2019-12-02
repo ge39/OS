@@ -29,8 +29,9 @@
 				<input class="input" type="text" name="solicitante" value="<?php echo $row['solicitante'];?>" readonly>
 			</div>
 			<div class="tecnico">
-				<label>Técnico - <?php echo $row['nome'];?></label><br>
-				<select name="id_tecnico">
+                        <label>Técnico</label><br>
+				<select name="id_tecnico">      
+                                        <option value="<?php echo $row['id_tecnico'];?>"><?php echo $row['nome'];?></option>
 					<?php foreach ($var_tec as $tecnico) { ?>
 						<option value ="<?php echo $tecnico['id'];?>">
 							<?php echo $tecnico['nome'];?> 
@@ -40,21 +41,17 @@
 			</div>
 			<div class="prioridade">
 				<label>Prioridade</label><br>
-				<input type="text" name="priore" value="<?php echo $row['prioridade'];?>">
+				<input type="text" name="priore" readonly value="<?php echo $row['prioridade'];?>">
 			</div>
 			<div class="status_chamado">
-				<label>Status - <?php echo $row['descricao_chamado'];?></label><br>
+				<label>Status</label><br>
 				<select required="required" name="status_chamado">
 					<option value="5">Fechado</option>
-					<?php foreach ($var_status_chamado as $status) { ?>
-						<?php echo $status['id_status_chamado'];?>
-						<option value="<?php echo $status['id'];?>"><?php echo $status['descricao_chamado'];?></option>
-					<?php }?>
 				</select>
 			</div>
 			<div class="data">
 				<label>Data Fechamento</label><br>
-				<input class="input" type="text" name="data_fechamento" value="<?php 
+				<input class="input" type="text" readonly name="data_fechamento" value="<?php 
 				date_default_timezone_set('America/Sao_Paulo');
 				$date = date('d-m-Y H:i');
 				echo $date;?>">
@@ -134,6 +131,7 @@
 		color: #FFF;
 		display: inline-block;
 		direction: column;
+                border-radius:10px;
 	}
 	.botao_fechar{
 		display: inline-block;
@@ -143,6 +141,7 @@
 		margin:  3px 1px;
 		height:0 auto;
 		text-align: right;
+                
 	}
 	.titulo{
 		margin-bottom: -1%;

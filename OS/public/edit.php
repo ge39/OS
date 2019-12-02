@@ -120,40 +120,38 @@
 			    <div class ="estoque">
 					<!--Inserir ítens no chamado<br>-->
 					<div class="produto">
-					
+						<div class="dados">
 							Produto Qtde 
-							<form action="../persistence/crud.php" method="">
-								<select name="id_produto">
-							 		<?php foreach ($var_produto as $etq) { ?>
-							 			<option value = "<?php echo $etq['id_produto'];?>">
-								 			<?php echo $etq['item'];?>
-								 		</option>
-								 	<?php }?>
-								</select>
-
-							 	<select class = "select" name="qtde">
-							 		<option name="1">1</option>
-							 		<option name="2">2</option>
-							 		<option name="3">3</option>
-							 		<option name="4">4</option>
-							 		<option name="5">5</option>
-							 		<option name="6">6</option>
-							 		<option name="7">7</option>
-							 		<option name="8">8</option>
-							 		<option name="9">9</option>
-							 		<option name="10">10</option>
-							 	</select>
-								<div class="item">
-									<input class = "button_inserir" type="submit" value="Adicionar Ítens">
-								</div>
-							 	<input type="hidden" name="code" value="4">
-							 	<input type="hidden" name="id_chamado" value="<?php echo $id ;?>">
-								
-							</form> 
-						
+						</div>
+						<form action="../persistence/crud.php" method="">
+							<select name="id_produto">
+						 		<?php foreach ($var_produto as $etq) { ?>
+						 			<option value = "<?php echo $etq['id_produto'];?>">
+							 			<?php echo $etq['item'];?>
+							 		</option>
+							 	<?php }?>
+							</select>
+						 	<select class = "select" name="qtde">
+						 		<option name="1">1</option>
+						 		<option name="2">2</option>
+						 		<option name="3">3</option>
+						 		<option name="4">4</option>
+						 		<option name="5">5</option>
+						 		<option name="6">6</option>
+						 		<option name="7">7</option>
+						 		<option name="8">8</option>
+						 		<option name="9">9</option>
+						 		<option name="10">10</option>
+						 	</select>
+						 	<input type="hidden" name="code" value="4">
+						 	<input type="hidden" name="id_chamado" value="<?php echo $id ;?>">
+						 	<div class="item">
+							    <input class = "button_inserir" type="submit" value="Adicionar Ítens">
+							</div>
+					 	</form>
 					</div>
-				</div>
 			</div>
+	      </div>
 	      <footer class="w3-container w3-teal">
 	        <p>Fechamento de Chamados</p>
 	      </footer>
@@ -230,11 +228,11 @@
 	}
 	
 	.button_inserir{
-		padding: 10px 20px;
+		padding: 10px 25px;
 		background: #009933;
 		color: #FFF;
 		font-family: poppins;
-		border-radius: 10px;
+                border-radius:10px;
 
 	}
 	.button_remover{
@@ -243,7 +241,7 @@
 		background: #ff3333;
 		color: #FFF;
 		font-family: poppins;
-		border-radius: 10px;
+                border-radius:10px;
 	}
 	.produto_util{
 		display: inline-block;
@@ -292,11 +290,13 @@
 		padding:5px 15px;
 		background: #006400;
 		color: #FFF;
+                border-radius:10px;
 	}
 	.button2{
 		padding:5px 15px;
 		background: #ff3333;
 		color: #FFF;
+                border-radius:10px;
 	}
 	.botao_fechar{
 		display: inline-block;
@@ -306,6 +306,7 @@
 		margin:  3px 4px;
 		height:0 auto;
 		text-align: right;
+                border-radius:10px;
 	}
 	
 	.id{
@@ -401,10 +402,10 @@
 	}
 	.estoque{
 		display: inline-block;
+		direction: column;
 		width: 99.9%;
 		background-color:#A9F5A9;
 		padding: 5px;
-
 		}
 		
 	.w3-container1{

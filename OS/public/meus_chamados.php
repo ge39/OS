@@ -15,14 +15,16 @@ require_once('../persistence/controller.php');
 			<div class="H6">Atribuido</div>
 			<div class="H7">Editar Chamados</div>
 		</div>
-		<div class="id_apelido">MEUS ATENDIMENTOS</div>
-		<?php foreach ($var_select_tec as $row) {?>
+
+                        <?php foreach ($var_select_tec as $row) {?>
+                        <div class="id_apelido">Chamado - <?php echo "Nº ".$row['id']?><?php echo " - Técnico ". $row['nome'];?></div>
+		
 			<div class="id">
 				<a href="../public/edit.php?id=<?php echo $row['id'];?>"><?php echo '<div class="label">ID</div>'." ".$row['id'];?></a><br>
 			</div>
 			
 			<div class="loja">
-				<a href="/ipanema/mapas/loja.php?loja=<?php echo $row['loja']?>" target="_blank"><?php echo '<div class="label">"Loja"</div>'." ".$row['loja'];?>
+				<a href="../mapas/loja.php?loja=<?php echo $row['loja']?>" target="_blank"><?php echo '<div class="label">Loja</div>'." ".$row['loja'];?>
 				</a>
 				
 			</div>
@@ -78,21 +80,7 @@ require_once('../persistence/controller.php');
 		     </li>
 		</ul>
 		<?php }?>
-</div><!--
-
-<div class ="rodape">
-	<div class="link3">
-		<form action="../public/abertura.php" method="GET">
-			<input type="hidden" name="id" value= '1'>
-			<input type="submit" class="button-link3" value="NOVO">
-		</form>
-	</div>
-	<div class="link4">
-		<form action="../public/encerrado.php" method="GET">
-		<input type="submit" class="button-link4" value="ENCERRADO">
-		</form>
-	</div>
-</div>-->
+</div>
 <script src="../js/app.js"></script>
 <script src="../js/busca.js"></script>
 <style>
@@ -230,6 +218,7 @@ require_once('../persistence/controller.php');
 			background-color:#3CB371;
 			padding: 10px 35%;
 			font-weight: bolder;
+                        border-radius:10px;
 		}
 		.link2{
 			flex-direction: column;
@@ -240,15 +229,14 @@ require_once('../persistence/controller.php');
 		}	
 		
 		.button-link2{
-			flex-direction: column;
-			display: inline-block;
+
 			width: 100%;	
 			height: 40px;
-			padding: 10px 35%;
 			text-align: center;
 			background-color:#FF6347;
 			font-size: 15px;
 			font-weight: bolder;
+                        border-radius:10px;
 		}	
 		
 	}

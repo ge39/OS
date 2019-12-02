@@ -5,6 +5,7 @@ require_once('../persistence/controller.php');
 ?>
  <link rel="stylesheet" type="text/css" href="../css/style.css">
  <link rel="stylesheet" type="text/css" href="../css/index.css">
+ <meta http-equiv="refresh" content="30"/>
  
  <div class="container">
 		<div class="header">
@@ -16,7 +17,7 @@ require_once('../persistence/controller.php');
 			<div class="H8">Atualizado</div>
 			<div class="H5">Prioridade</div>
 			<div class="H6">Atribuido</div>
-			<div class="H7">Editar Chamados</div>
+			<div class="H7">Editar</div>
 		</div>
 		
 	<?php foreach ($var_select_all as $row) {?>
